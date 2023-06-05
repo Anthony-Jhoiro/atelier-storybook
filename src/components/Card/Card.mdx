@@ -1,0 +1,74 @@
+import {Meta} from "@storybook/blocks"
+import * as CardStories from "./Card.stories"
+import {Card} from "./Card"
+
+<Meta of={CardStories}/>
+
+## The Card component
+
+This is a card :
+
+
+ <Card
+     pictureUrl={'https://images.unsplash.com/photo-1506878206813-92402b8ded23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'}
+     title={'I am a card'}
+     text={'Sugar plum jujubes candy candy icing soufflé topping cotton candy. Cotton candy lollipop biscuit sweet cookie sweet jelly. Cake bonbon jelly muffin chocolate cake donut tiramisu sugar plum toffee.'}
+     actionText={'Click me'}
+     onAction={() => alert('You clicked me !')}
+     />
+
+A card has an image, a title and a text. Its role is to represent a preview of something and maybe suggest an action
+
+### Action
+
+By default, a Card does not have an action button :
+
+<Card
+    pictureUrl={'https://images.unsplash.com/photo-1506878206813-92402b8ded23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'}
+    title={'I am a card'}
+    text={'Sugar plum jujubes candy candy icing soufflé topping cotton candy. Cotton candy lollipop biscuit sweet cookie sweet jelly. Cake bonbon jelly muffin chocolate cake donut tiramisu sugar plum toffee.'}
+/>
+
+
+```tsx
+import {Card} from "./Card";
+<Card
+    pictureUrl={'https://images.unsplash.com/photo-1506878206813-92402b8ded23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'}
+    title={'I am a card'}
+    text={'Sugar plum jujubes candy candy icing soufflé topping cotton candy. Cotton candy lollipop biscuit sweet cookie sweet jelly. Cake bonbon jelly muffin chocolate cake donut tiramisu sugar plum toffee.'}
+/>
+```
+
+You can add an action button by setting the `actionText` and `onAction` props like this.
+
+<Card
+    pictureUrl={'https://images.unsplash.com/photo-1506878206813-92402b8ded23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'}
+    title={'I am a card'}
+    text={'Sugar plum jujubes candy candy icing soufflé topping cotton candy. Cotton candy lollipop biscuit sweet cookie sweet jelly. Cake bonbon jelly muffin chocolate cake donut tiramisu sugar plum toffee.'}
+    actionText={'Click me'}
+    onAction={() => alert('You clicked me !')}
+/>
+
+```tsx
+import Card from "./Card";
+<Card
+    pictureUrl={'https://images.unsplash.com/photo-1506878206813-92402b8ded23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'}
+    title={'I am a card'}
+    text={'Sugar plum jujubes candy candy icing soufflé topping cotton candy. Cotton candy lollipop biscuit sweet cookie sweet jelly. Cake bonbon jelly muffin chocolate cake donut tiramisu sugar plum toffee.'}
+    actionText={'Click me'}
+    onAction={() => alert('You clicked me !')}
+/>
+```
+
+## Orientation
+You can also specify the card orientation using the `orientation` props.
+Yo can give the value `"vertical"` or `"horizontal"`.
+It works fine with the action props
+
+<Card
+    pictureUrl={'https://images.unsplash.com/photo-1506878206813-92402b8ded23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'}
+    title={'I am a card'}
+    text={'Sugar plum jujubes candy candy icing soufflé topping cotton candy. Cotton candy lollipop biscuit sweet cookie sweet jelly. Cake bonbon jelly muffin chocolate cake donut tiramisu sugar plum toffee.'}
+    orientation={'horizontal'}
+/>
+
